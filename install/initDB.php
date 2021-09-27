@@ -146,7 +146,7 @@ foreach ($sql as $query) {
 print "OK\n";
 
 print "Creating user ... ";
-if (!$link->query("create user  ".Config::$DB_USER."'@'".Config::$DB_HOST."' IDENTIFIED BY '".Config::$DB_PASSWORD."'")) {
+if (!$link->query("create user  '".Config::$DB_USER."'@'".Config::$DB_HOST."' IDENTIFIED BY '".Config::$DB_PASSWORD."'")) {
     print "ERROR: Cannot create user: " .  $link->error . "\n";
     exit(1);
 }
