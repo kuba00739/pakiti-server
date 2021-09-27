@@ -16,7 +16,7 @@
   when: ansible_facts['distribution'] == 'Debian'
 
 - name: Download repository from github and place it to /var/www
-  shell: git clone https://github.com/CESNET/pakiti-server /var/www/pakiti-server
+  shell: git clone https://github.com/kuba00739/pakiti-server /var/www/pakiti-server
   args:
     executable: /bin/bash
 
