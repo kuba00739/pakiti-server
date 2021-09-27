@@ -153,7 +153,7 @@ if (!$link->query("create user  '".Config::$DB_USER."'@'".Config::$DB_HOST."' ID
 print "OK\n";
 
 print "Granting privileges on '" . Config::$DB_NAME . ".*' to the user '" . Config::$DB_USER . "' configured in the pakiti configuration file ... ";
-if (!$link->query("grant select, insert, update, delete ON ".Config::$DB_NAME.".* TO  '".Config::$DB_USER."'@'".Config::$DB_HOST."' IDENTIFIED BY '".Config::$DB_PASSWORD."'")) {
+if (!$link->query("grant select, insert, update, delete ON ".Config::$DB_NAME.".* TO  '".Config::$DB_USER."'@'".Config::$DB_HOST."'")) {
     print "ERROR: Cannot grant the privileges: " .  $link->error . "\n";
     exit(1);
 }
